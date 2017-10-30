@@ -15,9 +15,12 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('twitch_id');
             $table->string('name');
+            $table->string('logo');
+            $table->string('twitch_token');
+            $table->string('twitch_refresh_token');
             $table->string('email')->unique();
-            $table->string('password');
             $table->rememberToken();
             $table->timestamps();
         });

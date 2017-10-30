@@ -1,9 +1,30 @@
+@import "node_modules/bulma/sass/utilities/initial-variables";
 
-// Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+$twitch-dark-bg-light: #201c2b;
+$twitch-dark-bg-dark: #17141f;
+$twitch-dark-color-light: #dad8de;
+$primary-invert: $twitch-dark-color-light;
 
-// Variables
-@import "variables";
+$navbar-item-color: $twitch-dark-color-light;
+$navbar-item-hover-color: $twitch-dark-color-light;
+$navbar-dropdown-arrow: $twitch-dark-color-light;
+$navbar-dropdown-item-hover-color: $twitch-dark-color-light;
 
-// Bootstrap
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+$grey-darker: $twitch-dark-color-light;
+
+$navbar-divider-background-color: #2c2541;
+$navbar-dropdown-border-top: #2c2541;
+
+$body-background-color: $twitch-dark-bg-dark;
+$navbar-background-color: $twitch-dark-bg-light;
+$navbar-item-hover-background-color: $twitch-dark-bg-dark;
+$navbar-dropdown-background-color: $twitch-dark-bg-light;
+$navbar-dropdown-item-hover-background-color: $twitch-dark-bg-dark;
+
+$navbar-item-img-max-height: 56px;
+
+@import "node_modules/bulma/bulma";
+
+#twitch-embed > iframe {
+  border: #2c2541 1px solid;
+}

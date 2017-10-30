@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/logout', 'MainController@logout')->name('logout');
+Route::get('twitch', 'TwitchController@twitch')->name('twitch');
+Route::get('twitch/callback', 'TwitchController@callback')->name('twitch-callback');
+
+Route::middleware('check-token')->group(function () {
+    Route::get('/', 'MainController@index')->name('index');
 });
+Route::middleware(['auth', 'check-token'])->group(function () {
+    Route::get('dashboard', 'DashboardController@index')->name('dashboard');
+});
+
